@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ToDo List</title>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'></head>
+
+<body>
+<style scoped>
+	h1{
+		font-weight: 700;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	ol, ul{
+		list-style: none;
+		padding:0;
+		opacity: .9
+	}
+	
+	li{
+		width:100%;
+		border: 1px solid black;
+		padding: 10px 20px;
+		background-color: #dddddd;
+		display: inline-block;
+	}
+
+	li:hover{
+		cursor: pointer;
+		background-color: orange;
+	}
+
+	html{
+		background: url('small_steps.png');
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 30px;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	span{
+		float: right;
+		padding:3px;
+		font-weight: 100;
+		font-size: 20px;
+	}
+
+
+	h2{
+		margin: 0;
+		float: left;
+		font-weight: 400;
+	}
+
+	.details{
+		clear: both;
+		float: left;
+		margin: 5px 0;
+		font-size: 15px;
+	}
+
+	.credit{
+		margin-top:10px;
+		float: right;
+	}
+</style>
+
+<h1>ToDo List</h1>
+<ul>
+	<li>
+		<h2>Galois Application</h2> 
+		<span>Due: 10/5</span>
+		<p class="details"> <a target="blank" href="https://galois-inc.hiringthing.com/job/18331/spring-software-engineering-research-intern">URL</a></p>
+		<p class="details">Write first draft of cover letter by next Monday</p>
+	</li>
+	<li>
+		<h2>Go Sailing</h2> 
+		<span>Due: 9/12</span>
+		<p class="details">Meet at the river</p>
+	</li>
+	<li>
+		<h2>Oatmeal & Coffee</h2>
+		<span>Due: Every Morning</span>
+		<p class="details">Oatmeal: 1 Cup Oats, Peanut Butter, Brown Sugar, Fruit, Almonds, Coconut</p>
+	</li>
+	<li>
+		<h2>Click to show ToDo details</h2>
+		<p class="details">Write first draft of cover letter by next Monday</p>
+	</li>
+	<li>
+		<h2>Drag to reposition</h2>
+		<p class="details">Write first draft of cover letter by next Monday</p>
+	</li>
+	<li>
+		<h2>Add New ToDo Button</h2>
+		<p class="details">Write first draft of cover letter by next Monday</p>
+	</li>
+	<li>
+		<h2>Deploy to Heroku</h2>
+		<p class="details">Write first draft of cover letter by next Monday</p>
+	</li>
+	<li>
+		<h2>Read</h2>
+		<p class="details">Write first draft of cover letter by next Monday</p>
+	</li>
+	<li>
+		<h2>Sleep</h2>
+		<p class="details">Write first draft of cover letter by next Monday</p>
+	</li>
+</ul>
+
+<p class="credit">bwhthd</p>
+
+</body>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+
+$(".details").hide();
+$("li").click(function(){
+	$(this).find(".details").toggle("fast");
+});
+
+
+
+</script>
+
+</html>
