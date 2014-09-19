@@ -1,0 +1,22 @@
+<h1>ToDo List</h1>
+<ul>
+	<li class="todo new">
+		<h2>Click To Add New Item</h2>
+		<form class="input-form" method="post">
+		<input class="input input-title" type="text" name="title" placeholder="Title"/>
+		<input class="input input-due" placeholder="Due Date" name="due"/>
+		<input class="input input-details" placeholder="Details" name="details"/>
+		<button class="btn-default" id="submit" type="submit">Save</button>
+		</form>
+	</li>
+	<%	@lines.each do |line|
+		name, details, due = line.split('--') %>
+  <li class="todo">
+    <h2><%= name %></h2> 
+    <span class="due"><%= due %></span>
+    <p class="details"><%= details %></p>
+  </li>
+  <% end %>
+</ul>
+
+<p class="credit">bwhthd</p>

@@ -1,0 +1,7 @@
+Click to show ToDo details--Done!
+Drag to reposition--Pending development
+Add New ToDo Button--Pending development
+Deploy To Heroku--Pending--
+Oatmeal & Coffee--Oatmeal: 1 Cup Oats, Peanut Butter, Brown Sugar, Fruit, Almonds, Coconut--Every Morning
+Go Sailing--Meet at the river--9/22
+Galois Application--Write first draft of cover letter by next Monday--10/5

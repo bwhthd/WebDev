@@ -1,0 +1,132 @@
+h1{
+	font-weight: 700;
+	margin: 10px auto;
+	text-align: center;
+}
+
+ol, ul{
+	list-style: none;
+	padding:0;
+	opacity: .9
+}
+
+.todo{
+	width:100%;
+	border: 1px solid black;
+	padding: 10px 20px;
+	background-color: #dddddd;
+	display: inline-block;
+}
+
+.todo:hover{
+	cursor: pointer;
+	background-color: orange;
+}
+
+body{
+	background: url('/images/small_steps.png');
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 30px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.due{
+	float: right;
+	padding:3px;
+	font-weight: 100;
+	font-size: 20px;
+}
+
+.input{
+	background-color: white;
+	padding:0;
+	border:none;
+	border-bottom: 1px solid black;
+	color: black;
+   	font-family: 'Josefin Sans', sans-serif;
+}
+
+.new:hover{
+	background-color:white;
+}
+
+.input:focus{
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+	color: black;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: black;  
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: black;  
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+:-ms-input-placeholder {  
+	color: black;  
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.input-title{
+	width:80%;
+	float: left;
+	font-weight: 400;
+	font-size: 1.5em;
+	margin-bottom:10px;
+}
+
+.input-due{
+	float:right;
+	padding:3px;
+	font-weight: 100;
+	font-size: 20px;
+	width:10%;
+}
+
+.input-details{
+	clear: both;
+	float: left;
+	margin: 5px 0;
+	font-size: 15px;
+	width:100%;
+}
+
+
+.new{
+	margin-bottom:10px;
+	background-color: white;
+}
+
+.btn-default{
+	clear: both;
+	float:left;
+	padding:10px;
+	margin: 0 auto;
+}
+
+
+h2{
+	margin: 0;
+	float: left;
+	font-weight: 400;
+}
+
+.details{
+	clear: both;
+	float: left;
+	margin: 5px 0;
+	font-size: 15px;
+}
+
+.credit{
+	margin-top:10px;
+	float: right;
+}
