@@ -5,22 +5,23 @@
 # use bundler
 require 'rubygems'
 require 'bundler/setup'
+
 # load all of the gems in the gemfile
 Bundler.require
+require './models/TodoItem.rb'
+
+ActiveRecord::Base.establish_connection(
+  :adapter  => 'sqlite3',
+  :database => 'db/development.db',
+  :encoding => 'utf8'
+)
 
 get '/' do
-	file_contents = File.read("model/todos.txt")
-	@lines = file_contents.split("\n")
-	@lines = @lines.reverse
+	@allItems = TodoItem.all
 	erb :index
 end
 
 post '/' do
-	File.open("model/todos.txt", "a") do |file|
-		file.puts "#{params[:title]}--#{params[:details]}--#{params[:due]}\n"
-	end
-	file_contents = File.read("model/todos.txt")
-	@lines = file_contents.split("\n")
-	@lines = @lines.reverse
-	erb :index
+	TodoItem.create(name: params[:title], details: params[:details], due: params[:due])
+	redirect '/'
 end

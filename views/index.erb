@@ -9,13 +9,12 @@
 		<button class="btn-default" id="submit" type="submit">Save</button>
 		</form>
 	</li>
-	<%	@lines.each do |line|
-		name, details, due = line.split('--') %>
-  <li class="todo">
-    <h2><%= name %></h2> 
-    <span class="due"><%= due %></span>
-    <p class="details"><%= details %></p>
-  </li>
+	<%	@allItems.each do |todo| %>
+  	<li class="todo">
+    	<h2><%= todo.name %></h2> 
+    	<span class="due"><%= todo.due %></span>
+    	<p class="details"><%= todo.details %></p>
+  	</li>
   <% end %>
 </ul>
 
