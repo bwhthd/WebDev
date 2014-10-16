@@ -11,6 +11,7 @@
 	</li>
 	<%	@allItems.each do |todo| %>
   	<li class="todo">
+  		<a href="/delete?id=<%= todo.id %>"><i class="check fa fa-check"></i></a>
     	<h2><%= todo.name %></h2> 
     	<span class="due"><%= todo.due %></span>
     	<p class="details"><%= todo.details %></p>

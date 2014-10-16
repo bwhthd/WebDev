@@ -122,9 +122,23 @@ h2{
 .details{
 	clear: both;
 	float: left;
-	margin: 5px 0;
+	margin: 5px 0 5px 50px;
 	font-size: 15px;
 }
+
+.check{
+	margin-top: 5px;
+	margin-right: 10px;
+	float: left;
+	width: 4%;
+	opacity: .4;
+	color:black;
+}
+
+.check:hover{
+	opacity: 1;
+}
+
 
 .credit{
 	margin-top:10px;
