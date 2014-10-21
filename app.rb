@@ -21,7 +21,7 @@ else
 end
 
 get '/' do
-	@allItems = TodoItem.all
+	@allItems = TodoItem.all.order(:due)
 	erb :index
 end
 
