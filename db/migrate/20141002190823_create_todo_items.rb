@@ -3,7 +3,7 @@ class CreateTodoItems < ActiveRecord::Migration
   	create_table :todo_items do |t|
   		t.string :name
   		t.string :details
-  		t.datetime :due
+  		t.string :due
   	end
   end
 end
