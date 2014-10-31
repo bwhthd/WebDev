@@ -11,14 +11,23 @@ $("li").click(function(){
 });
 
 title = $(".input-title")
+name = $(".input-name")
 
 
 function enableSubmitEvent(){
-	if(title.val().length > 0){
+	if(this.val().length > 0){
 		$("#submit").fadeIn();
 	}else{
 		$("#submit").fadeOut();
 	}
 }
 
+$(".signup").click(
+	function(){
+		$(".signup h2").fadeOut();
+		$(".input-form").fadeIn();
+	} 
+);
+
 title.keyup(enableSubmitEvent);
+name.keyup(enableSubmitEvent);

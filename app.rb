@@ -9,6 +9,7 @@ require 'bundler/setup'
 # load all of the gems in the gemfile
 Bundler.require
 require './models/TodoItem.rb'
+require './models/User.rb'
 
 if ENV['DATABASE_URL']
   ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
@@ -20,17 +21,35 @@ else
   )
 end
 
+get '/delete' do
+	TodoItem.find(params[:id]).destroy
+	redirect '/' + params[:name]
+end
+
+get '/:name' do
+	@user = User.find_by(name: params[:name])
+	@allItems = @user.todo_items
+	erb :user
+end
+
+post '/:name' do
+	@user = User.find_by(name: params[:name])
+	TodoItem.create(name: params[:title], details: params[:details], due: params[:due], user_id: @user.id)
+	redirect '/' + params[:name]
+end
+
 get '/' do
-	@allItems = TodoItem.all.order(:due)
 	erb :index
 end
 
 post '/' do
-	TodoItem.create(name: params[:title], details: params[:details], due: params[:due])
-	redirect '/'
+	User.create(name: params[:name])
+	redirect '/' + params[:name]
 end
 
-get '/delete' do
-	TodoItem.find(params[:id]).destroy
-	redirect '/'
-end
+
+
+
+
+
+
