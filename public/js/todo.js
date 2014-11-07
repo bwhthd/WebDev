@@ -10,17 +10,34 @@ $("li").click(function(){
 	$(this).find(".details").toggle("fast");
 });
 
-title = $(".input-title")
-name = $(".input-name")
+
+if(typeof $(".input-title").val() === 'string'){
+	console.log("title");
+	title = $(".input-title");
+}
+
+if(typeof $(".input-name").val() === 'string'){
+	console.log("Name");
+	name = $(".input-name");
+}
 
 
-function enableSubmitEvent(){
-	if(this.val().length > 0){
+function enableSubmitEventToDo(){
+	if(title.val().length > 0){
 		$("#submit").fadeIn();
 	}else{
 		$("#submit").fadeOut();
 	}
 }
+
+function enableSubmitEventNewUser(){
+	if(name.val().length > 0){
+		$("#submit").fadeIn();
+	}else{
+		$("#submit").fadeOut();
+	}
+}
+
 
 $(".signup").click(
 	function(){
@@ -29,5 +46,5 @@ $(".signup").click(
 	} 
 );
 
-title.keyup(enableSubmitEvent);
-name.keyup(enableSubmitEvent);
+title.keyup(enableSubmitEventToDo);
+name.keyup(enableSubmitEventNewUser);
